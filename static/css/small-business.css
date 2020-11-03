@@ -7,20 +7,20 @@
 body {
   padding-top: 56px;
 }
-#carouselExampleControls {
-  width: 100%; /* define suitable width here*/
-  height: 100%;
-  object-fit: contain;
-}
-.item img {
-       max-width: 100%;
-       max-height: 50%;
-}
+
+
 #letra_logo {
     font-family: "Satisfy", cursive;
     font-size: 200%;
     color: yellow;
     margin-left: 1rem;
+}
+.container_carrousel{
+    max-height: 500px;
+}
+.item img {
+    max-width: 100%;
+    max-height: 50%;
 }
 .team-member img {
     width: 225px;

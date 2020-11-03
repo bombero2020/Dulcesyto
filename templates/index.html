@@ -24,9 +24,11 @@
 <body>
 
   <!-- Barra de navegacion -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
     <div class="container">
-      <a id="letra_logo" class="navbar-brand" href="#" >Dulces&to</a>
+      <a id="letra_logo" class="navbar-brand" href="#" >
+        <img src="{% static 'pictures/logo_sin_fondo_en_morado.jpeg' %}" class="d-inline-block align-top img-thumbnail" alt="logo_sin_fondo" width="180" height="90">
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -53,21 +55,21 @@
   <!-- Fin barra de navegacion -->
 
   <!--    #carrousel-->
-  <div class="container">
+  <div class="container_carrousel">
     <br>
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="{% static 'pictures/imagen_llegada.jpg' %}" alt="First slide">
+        <div class="carousel-item  active">
+          <img class="img-fluid" src="{% static 'pictures/imagen_llegada.jpg' %}" alt="First slide">
         </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="{% static 'pictures/foto_cumple_mikaela.jpeg' %}" alt="Second slide">
+        <div class="carousel-item  ">
+          <img class="img-fluid" src="{% static 'pictures/foto_cumple_mikaela.png' %}" alt="Second slide">
         </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="{% static 'pictures/foto_tarta_amarilla.jpeg' %}" alt="Third slide">
+        <div class="carousel-item  ">
+          <img class="img-fluid" src="{% static 'pictures/foto_tarta_amarilla.jpeg' %}" alt="Third slide">
         </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="{% static 'pictures/foto_cumple_mayor.jpeg' %}" alt="Third slide">
+        <div class="carousel-item ">
+          <img class="img-fluid" src="{% static 'pictures/foto_cumple_mayor.png' %}" alt="Fourth slide">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -164,7 +166,7 @@
         <div class="col-lg-12 text-center">
           <h3 class="section-heading text-muted">Contáctanos</h3>
           <h2 class="section-heading text-uppercase">628343611 - 606241125 - 684952166</h2>
-          <a href="#contact" class="btn btn-block btn-lg btn-success">Llámanos</a>
+          <a href="tel:+34628343611" class="btn btn-block btn-lg btn-success">Llámanos</a>
         </div>
       </div>
 
