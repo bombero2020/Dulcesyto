@@ -3,24 +3,12 @@
  * Copyright 2013-2020 Start Bootstrap
  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-small-business/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Satisfy");
 body {
   padding-top: 56px;
 }
-
-
-#letra_logo {
-    font-family: "Satisfy", cursive;
-    font-size: 200%;
-    color: yellow;
-    margin-left: 1rem;
-}
-.container_carrousel{
-    max-height: 500px;
-}
-.item img {
-    max-width: 100%;
-    max-height: 50%;
+.img-fluid {
+    display:block;
+    margin:auto;
 }
 .team-member img {
     width: 225px;
