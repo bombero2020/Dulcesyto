@@ -5,6 +5,7 @@
  */
 body {
   padding-top: 56px;
+  background: honeydew;
 }
 .img-fluid {
     display:block;
@@ -17,6 +18,11 @@ body {
 }
 .team-member {
     text-align: center;
+}
+.estilo1 {
+    font-family: "Sofia";
+    font-size: 1rem;
+    background: honeydew;
 }
 .fa {
     padding: 10px;
