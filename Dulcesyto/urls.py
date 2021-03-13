@@ -20,5 +20,5 @@ from portafolios.views import indice
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', indice),
+    path('', indice),
 ]
