@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Dulcesyto-Tartas-Cupcackes-desayunos-decoracion</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/small-business.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <!-- Librerias para los iconos de redes sociales -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  <!-- Barra de navegacion -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <div class="container">
+      <a id="letra_logo" class="navbar-brand" href="/" >
+        <img src="{% static 'pictures/logo_sin_fondo_en_morado.jpeg' %}" class="d-inline-block align-top img-thumbnail" alt="logo_sin_fondo" width="180" height="90">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#que_hacemos">¿Qué hacemos?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#precios">Tartas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="/gallery/image_gallery">Galeria de Fotos</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" target="_blank" href="/gallery/upload_image">Subir Fotos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Fin barra de navegacion -->
+  {% block content %}
+
+  {% endblock %}
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Dulcesyto 2020</p>
+
+    </div>
+    <div class="center text-center">
+      <!-- Add font awesome icons -->
+      <a href="https://www.facebook.com/dulce.syto.5" target="_blank" class="fa fa-facebook"></a>
+      <a href="https://www.instagram.com/dulcesyto1/" target="_blank" class="fa fa-instagram"></a>
+      <a href="/login" target="_blank" class="fa fa-desktop" ></a>
+    </div>
+
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+</html>

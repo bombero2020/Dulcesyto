@@ -1,0 +1,14 @@
+{% extends "nav_bar.html" %}
+
+{% block content %}
+  {% load static %}
+  {% for image in images %}
+    <button type="button" class="btn btn-danger center">Borrar</button>
+    {% if user.is_authenticated %}
+    <button type="button" class="btn btn-danger">Borrar</button>
+    {% endif %}
+    <img src="{{image.image.url}}" alt="{{image.name}}" style="width:300px;border-radius:10%;margin-left:10px;">
+    <p class="text-nowrap text-center">{{image.name}}</p>
+    <p> </p>
+  {% endfor %}
+{% endblock %}
