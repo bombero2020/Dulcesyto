@@ -22,7 +22,8 @@ from portafolios.views import indice
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', indice),
-    path('gallery/', include('gallery.urls'))
+    path('gallery/', include('gallery.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
 urlpatterns += staticfiles_urlpatterns()
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

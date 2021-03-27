@@ -14,7 +14,9 @@
     <input type="submit" value="Subir" />
   </form>
   {% else %}
-  <p> Logeate </p>
+  <a href="{% url 'login' %}">Log In</a>
   {% endif %}
+  <p></p>
   <p><a href="{% url 'gallery:image_gallery' %}">Ir a Galeria de imágenes</a></p>
+  <p><a href="{% url 'logout' %}">Logout</a></p>
 {% endblock %}
