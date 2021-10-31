@@ -129,6 +129,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"), ]
 # Media folder for gallery
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+# la carpeta media/gallery es necesaria para el desarrollo y testing.
 
 # Login and logout redirects
 LOGIN_REDIRECT_URL = '/gallery/upload_image/'

@@ -1,3 +1,5 @@
 /venv/
 db.sqlite3
 media/gallery/
+dulcesito_venv/
+*.pyc

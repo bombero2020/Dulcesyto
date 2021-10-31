@@ -3,11 +3,21 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postg
 
 `Crear un entorno virtual:`
 python -V
-output: Python 3.8.6
-python -m virtualenv venv
+output: Python 3.8.10
+
+python3 -m venv dulcesito_venv
+source dulcesito_venv/bin/activate
 
 Requirements:
-pip install django==3.1.3 gunicorn==20.0.4
+pip install -r requirements.txt
+
+Test local server:
+python manage.py runserver 0:8000
+
+15.188.81.240:8000
+
+Crear carpetas para la galeria de fotos:
+"comando para hacer el build"
 
 test gunicorn:
 gunicorn --bind 0.0.0.0:8000 Dulcesyto.wsgi
