@@ -1,0 +1,37 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
+
+  dulcesyto:
+    # image: django-project-container:17092022
+    build: .
+    command: gunicorn Dulcesyto.wsgi:application --bind 0.0.0.0:8001 --timeout 1800
+    # command: sleep infinity
+    volumes:
+     - dulcesyto_pip_data:/usr/local/lib/python3.8/site-packages
+     - ./static:/var/www/dulcesyto/static
+    expose:
+      - 8001
+    # ports:
+    #   - "8000:8001"
+    depends_on:
+      - db
+
+  nginx:
+    build: ./nginx
+    ports:
+      - 80:8000
+    volumes:
+      - ./static:/www/static
+    depends_on:
+      - dulcesyto
+
+volumes:
+  dulcesyto_pip_data:
+  postgres_data:

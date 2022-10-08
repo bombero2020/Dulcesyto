@@ -19,9 +19,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-with open('secret') as f:
-    SECRET_KEY = f.read().strip()
-
+# with open('secret') as f:
+#     SECRET_KEY = f.read().strip()
+SECRET_KEY = str(os.system('openssl rand -base64 32'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -76,10 +76,20 @@ WSGI_APPLICATION = 'Dulcesyto.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "postgres",
+        "USER": "postgres",
+        "PASSWORD": "postgres",
+        "HOST": "db",  # set in docker-compose.yml
+        "PORT": 5432,  # default postgres port
     }
 }
 
@@ -125,6 +135,9 @@ STATIC_URL = '/static/'
 # this is directory paths where you have to put your project level static files
 # you can put multiple folders here
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"), ]
+
+# This will copy all files from your static folders into the STATIC_ROOT directory.
+STATIC_ROOT = "/var/www/dulcesyto/static"
 
 # Media folder for gallery
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
